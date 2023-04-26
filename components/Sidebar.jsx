@@ -4,6 +4,7 @@ import { Sidebar, Menu, MenuItem, SubMenu, useProSidebar } from 'react-pro-sideb
 import { HiHome } from "react-icons/hi2";
 import { AiFillSetting, AiFillSafetyCertificate, AiFillUnlock } from "react-icons/ai";
 import { IoStatsChartSharp } from "react-icons/io5";
+import { HiOutlineMinus, HiMenuAlt3 } from "react-icons/hi";
 import { FaUser } from "react-icons/fa";
 import { RiPagesFill } from "react-icons/ri";
 import { CgMenuBoxed } from "react-icons/cg";
@@ -30,25 +31,29 @@ const SidebarMenu = () => {
     const { collapseSidebar } = useProSidebar();
 
     return (
-        <div className="flex h-screen sticky top-0 left-0">
-
+        <div className="flex h-screen top-0 left-0">
 
             <Sidebar collapsed={isCollapsed}
                 backgroundColor="#2B2C40"
                 transitionDuration={300}
             >
+                {/* <button onClick={() => { collapseSidebar(); setIsCollapsed(!isCollapsed) }}
+                    className="p-[7px] rounded-full bg-white absolute -right-4 z-50">
+                    <MdKeyboardArrowRight size={20} className="bg-[#696CFF] rounded-full" color="white" />
+                </button> */}
+                <button onClick={() => { collapseSidebar(); setIsCollapsed(!isCollapsed) }}
+                    className="absolute right-0 z-50"
+                >
+                    <HiMenuAlt3 size={22} color="grey" />
+                </button>
 
                 <div className="flex items-center p-7 sticky top-0 z-10 bg-[#2B2C40]">
-
                     <img src="/logo.svg" alt="sigma logo" />
                     {!isCollapsed ? <h3 className="text-gray-300 font-extrabold text-2xl ml-2">SIGMA</h3> : undefined}
 
-                    <button onClick={() => { collapseSidebar(); setIsCollapsed(!isCollapsed) }}
-                        className="p-[7px] rounded-full bg-white absolute -right-2 z-10"
-                    >
-                        <MdKeyboardArrowRight size={20} className="bg-[#696CFF] rounded-full" color="white" />
-                    </button>
                 </div>
+
+
 
 
                 <Menu iconShape="square"
@@ -58,7 +63,7 @@ const SidebarMenu = () => {
                                 return {
                                     color: active ? '#fff' : '#9494A6',
                                     backgroundColor: active && '#696CFF',
-                                    borderRadius: "10px",
+                                    borderRadius: "11px",
                                     ":hover": { backgroundColor: "rgba(236, 236, 236, 0.05)" }
                                 };
                         },
@@ -74,6 +79,11 @@ const SidebarMenu = () => {
                             selected={selected}
                             setSelected={setSelected}
                         />
+
+                        <div className={`flex items-center my-4 text-gray-500 text-xs font-bold ${isCollapsed && "justify-center"}`}>
+                            <HiOutlineMinus size={20} className="mr-2" />
+                            {!isCollapsed && <div className="">APPS & PAGES</div>}
+                        </div>
 
                         <Item
                             title="Settings"
