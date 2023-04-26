@@ -38,16 +38,16 @@ const SidebarMenu = () => {
                 transitionDuration={300}
             >
 
-                <button onClick={() => { collapseSidebar(); setIsCollapsed(!isCollapsed) }}
-                    className="p-[7px] rounded-full bg-white absolute right-0"
-                >
-                    <MdKeyboardArrowRight size={20} className="bg-[#696CFF] rounded-full" color="white" />
-                </button>
-                <div className="flex items-center p-6">
+                <div className="flex items-center p-7 sticky top-0 z-10 bg-[#2B2C40]">
 
                     <img src="/logo.svg" alt="sigma logo" />
-                    {isCollapsed ? <h3 className="text-gray-300 font-extrabold text-2xl ml-2">SIGMA</h3> : undefined}
+                    {!isCollapsed ? <h3 className="text-gray-300 font-extrabold text-2xl ml-2">SIGMA</h3> : undefined}
 
+                    <button onClick={() => { collapseSidebar(); setIsCollapsed(!isCollapsed) }}
+                        className="p-[7px] rounded-full bg-white absolute -right-2 z-10"
+                    >
+                        <MdKeyboardArrowRight size={20} className="bg-[#696CFF] rounded-full" color="white" />
+                    </button>
                 </div>
 
 
@@ -58,21 +58,15 @@ const SidebarMenu = () => {
                                 return {
                                     color: active ? '#fff' : '#9494A6',
                                     backgroundColor: active && '#696CFF',
+                                    borderRadius: "10px",
+                                    ":hover": { backgroundColor: "rgba(236, 236, 236, 0.05)" }
                                 };
                         },
                     }}
 
                 >
 
-
-                    <SubMenu label="Charts" icon={<IoStatsChartSharp />} >
-                        <MenuItem> Pie charts </MenuItem>
-                        <MenuItem> MenuItemne charts </MenuItem>
-                    </SubMenu>
-
-
-
-                    <div className="">
+                    <div>
                         <Item
                             title="Dashboard"
                             to="/"
@@ -80,41 +74,90 @@ const SidebarMenu = () => {
                             selected={selected}
                             setSelected={setSelected}
                         />
+
                         <Item
-                            title="Auth"
+                            title="Settings"
                             to="/"
                             icon={<AiFillSetting size={20} />}
                             selected={selected}
                             setSelected={setSelected}
                         />
-                        <Item
-                            title="Users"
-                            to="/"
-                            icon={<FaUser size={20} />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item
-                            title="Roles & Permissions"
-                            to="/"
-                            icon={<AiFillSafetyCertificate size={20} />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item
-                            title="Pages"
-                            to="/"
-                            icon={<RiPagesFill size={20} />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item
-                            title="Auth Pages"
-                            to="/"
-                            icon={<AiFillUnlock size={20} />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
+
+                        <SubMenu label="User" icon={<FaUser size={18} />}>
+                            <Item
+                                title="List"
+                                to="/"
+                                selected={selected}
+                                setSelected={setSelected}
+                            />
+                            <SubMenu label="View" >
+                                <Item
+                                    title="Account"
+                                    to="/"
+                                    selected={selected}
+                                    setSelected={setSelected}
+                                />
+                                <Item
+                                    title="Security"
+                                    to="/"
+                                    selected={selected}
+                                    setSelected={setSelected}
+                                />
+                            </SubMenu>
+                        </SubMenu>
+
+                        <SubMenu label="Roles & Permissions" icon={<AiFillSafetyCertificate size={20} />} >
+                            <Item
+                                title="Roles"
+                                to="/"
+                                selected={selected}
+                                setSelected={setSelected}
+                            />
+                            <Item
+                                title="Permissions"
+                                to="/"
+                                selected={selected}
+                                setSelected={setSelected}
+                            />
+                        </SubMenu>
+
+
+                        <SubMenu label="Pages" icon={<RiPagesFill size={20} />} >
+                            <SubMenu label="User Profile" ></SubMenu>
+                            <SubMenu label="Account Settings" ></SubMenu>
+                            <Item
+                                title="FAQ"
+                                to="/"
+                                selected={selected}
+                                setSelected={setSelected}
+                            />
+                            <Item
+                                title="Help Center"
+                                to="/"
+                                selected={selected}
+                                setSelected={setSelected}
+                            />
+                            <Item
+                                title="Pricing"
+                                to="/"
+                                selected={selected}
+                                setSelected={setSelected}
+                            />
+                            <MenuItem>123</MenuItem>
+                            <SubMenu label="Miscellaneous" ></SubMenu>
+                        </SubMenu>
+
+
+                        <SubMenu label="Auth Pages" icon={<AiFillUnlock size={20} />} >
+                            <SubMenu label="Login" ></SubMenu>
+                            <SubMenu label="Register" ></SubMenu>
+                            <SubMenu label="Verify Email" ></SubMenu>
+                            <SubMenu label="Forgot Password" ></SubMenu>
+                            <SubMenu label="Reset Password" ></SubMenu>
+                            <SubMenu label="Two Steps" ></SubMenu>
+                        </SubMenu>
+
+
                         <Item
                             title="Wizard Examples"
                             to="/"
@@ -134,7 +177,7 @@ const SidebarMenu = () => {
 
                 </Menu>
             </Sidebar>
-        </div>
+        </div >
 
     );
 };
