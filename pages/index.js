@@ -3,6 +3,7 @@ import { Public_Sans } from 'next/font/google'
 import Header from '@/components/Header'
 import Head from 'next/head'
 import SidebarMenu from '@/components/Sidebar'
+import User from './User'
 // import styles from '@/styles/Home.module.css'
 
 const font = Public_Sans({ subsets: ['latin'] })
@@ -17,12 +18,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={font.className}>
-        <div className="flex relative w-full h-full m-0 p-0">
+        {/* <div className="flex relative w-full h-full m-0 p-0">
           <SidebarMenu />
           <main className='w-full h-full'>
             <Header />
           </main>
-        </div>
+        </div> */}
       </main>
     </>
   )
