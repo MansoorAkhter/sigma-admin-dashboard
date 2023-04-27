@@ -1,15 +1,19 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Sidebar, Menu, MenuItem, SubMenu, useProSidebar } from 'react-pro-sidebar';
-import { HiHome } from "react-icons/hi2";
-import { AiFillSetting, AiFillSafetyCertificate, AiFillUnlock } from "react-icons/ai";
-import { IoStatsChartSharp } from "react-icons/io5";
-import { HiOutlineMinus, HiMenuAlt3 } from "react-icons/hi";
-import { FaUser } from "react-icons/fa";
-import { RiPagesFill } from "react-icons/ri";
-import { CgMenuBoxed } from "react-icons/cg";
-import { MdSystemUpdateAlt, MdKeyboardArrowRight } from "react-icons/md";
 
+// ICONS
+import { AiOutlineUnlock } from "react-icons/ai";
+import { IoShieldCheckmarkOutline, IoSettingsOutline } from "react-icons/io5";
+import { HiOutlineMinus, HiMenuAlt3 } from "react-icons/hi";
+import { RxPerson } from "react-icons/rx";
+import { VscWindow } from "react-icons/vsc";
+import { CgList } from "react-icons/cg";
+import { SlHome } from "react-icons/sl";
+import { MdSystemUpdateAlt } from "react-icons/md";
+
+
+//button component
 const Item = ({ title, to, selected, setSelected, icon }) => {
     return (
         // <Link href={to}>
@@ -75,7 +79,7 @@ const SidebarMenu = () => {
                         <Item
                             title="Dashboard"
                             to="/"
-                            icon={<HiHome size={20} />}
+                            icon={<SlHome size={18} />}
                             selected={selected}
                             setSelected={setSelected}
                         />
@@ -88,12 +92,12 @@ const SidebarMenu = () => {
                         <Item
                             title="Settings"
                             to="/"
-                            icon={<AiFillSetting size={20} />}
+                            icon={<IoSettingsOutline size={20} />}
                             selected={selected}
                             setSelected={setSelected}
                         />
 
-                        <SubMenu label="User" icon={<FaUser size={18} />}>
+                        <SubMenu label="User" icon={<RxPerson size={21} />}>
                             <Item
                                 title="List"
                                 to="/"
@@ -116,7 +120,7 @@ const SidebarMenu = () => {
                             </SubMenu>
                         </SubMenu>
 
-                        <SubMenu label="Roles & Permissions" icon={<AiFillSafetyCertificate size={20} />} >
+                        <SubMenu label="Roles & Permissions" icon={<IoShieldCheckmarkOutline size={20} />} >
                             <Item
                                 title="Roles"
                                 to="/"
@@ -132,7 +136,7 @@ const SidebarMenu = () => {
                         </SubMenu>
 
 
-                        <SubMenu label="Pages" icon={<RiPagesFill size={20} />} >
+                        <SubMenu label="Pages" icon={<VscWindow size={20} />} >
                             <SubMenu label="User Profile" ></SubMenu>
                             <SubMenu label="Account Settings" ></SubMenu>
                             <Item
@@ -158,7 +162,7 @@ const SidebarMenu = () => {
                         </SubMenu>
 
 
-                        <SubMenu label="Auth Pages" icon={<AiFillUnlock size={20} />} >
+                        <SubMenu label="Auth Pages" icon={<AiOutlineUnlock size={22} />} >
                             <SubMenu label="Login" ></SubMenu>
                             <SubMenu label="Register" ></SubMenu>
                             <SubMenu label="Verify Email" ></SubMenu>
@@ -171,7 +175,7 @@ const SidebarMenu = () => {
                         <Item
                             title="Wizard Examples"
                             to="/"
-                            icon={<CgMenuBoxed size={22} />}
+                            icon={<CgList size={20} />}
                             selected={selected}
                             setSelected={setSelected}
                         />
