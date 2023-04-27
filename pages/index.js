@@ -17,7 +17,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={font.className}>
-        <SidebarMenu />
+        <div className="flex relative w-full h-full m-0 p-0">
+          <SidebarMenu />
+          <main className='w-full h-full'>
+            <Header />
+          </main>
+        </div>
       </main>
     </>
   )
