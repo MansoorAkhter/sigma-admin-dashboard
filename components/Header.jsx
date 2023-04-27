@@ -24,7 +24,7 @@ const Header = () => {
                     {/*Search Button */}
                     <div className="flex items-center cursor-pointer">
                         <IconButton icon="/icons/search.svg" name="search" />
-                        <span className="text-gray-400 font-light">Search (Ctrl+/)</span>
+                        <span className="text-gray-400 font-light hidden sm:block">Search (Ctrl+/)</span>
                         {/* <input placeholder="Search (Ctrl+/)" className="placeholder-gray-300 font-light" /> */}
                     </div>
 
