@@ -41,12 +41,12 @@ const SidebarMenu = () => {
 
     return (
         <main className={font.className}>
-            <div className="flex h-screen top-0 left-0">
+            <div className="flex h-screen top-0 left-0 sticky overflow-y-scroll no-scrollbar">
 
                 <Sidebar collapsed={isCollapsed}
                     backgroundColor="#2B2C40"
-                    transitionDuration={300}
-                >
+                    transitionDuration={300} >
+
                     {/* <button onClick={() => { collapseSidebar(); setIsCollapsed(!isCollapsed) }}
                     className="p-[7px] rounded-full bg-white absolute -right-4 z-50">
                     <MdKeyboardArrowRight size={20} className="bg-[#696CFF] rounded-full" color="white" />
@@ -198,7 +198,7 @@ const SidebarMenu = () => {
                     </Menu>
                 </Sidebar>
             </div >
-        </main>
+        </main >
 
     );
 };

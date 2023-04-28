@@ -18,7 +18,7 @@ const Header = () => {
 
     return (
         <main className={font.className}>
-            <div className="w-full h-[84px] px-4 py-3">
+            <div className="w-full h-[84px] pt-3 px-4">
                 <div className="w-full h-full border-[1px] border-gray-300 rounded-md flex items-center justify-between px-2">
 
                     {/*Search Button */}
