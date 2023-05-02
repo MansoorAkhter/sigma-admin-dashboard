@@ -12,6 +12,7 @@ import {
     Stack,
     TextField,
     Tooltip,
+    Switch
 } from '@mui/material';
 import { Delete, Edit } from '@mui/icons-material';
 import { data, states } from '../data/makeData';
@@ -20,6 +21,7 @@ const CrudTable = () => {
     const [createModalOpen, setCreateModalOpen] = useState(false);
     const [tableData, setTableData] = useState(() => data);
     const [validationErrors, setValidationErrors] = useState({});
+    const [checked, setChecked] = useState(true);
 
     const handleCreateNewRow = (values) => {
         tableData.push(values);
@@ -129,13 +131,15 @@ const CrudTable = () => {
             },
             {
                 accessorKey: 'state',
-                header: 'State',
+                header: 'Status',
                 muiTableBodyCellEditTextFieldProps: {
                     select: true, //change to select for a dropdown
                     children: states.map((state) => (
-                        <MenuItem key={state} value={state}>
-                            {state}
-                        </MenuItem>
+                        <div className='bg-gray-400 p-4 font-light'>
+                            <MenuItem key={state} value={state}>
+                                {state}
+                            </MenuItem>
+                        </div>
                     )),
                 },
             },
@@ -144,7 +148,7 @@ const CrudTable = () => {
     );
 
     return (
-        <div className='border-[1px] border-gray-300 rounded-md'>
+        <div className='border-[1px] border-gray-300 rounded-md mx-4'>
             <MaterialReactTable
                 displayColumnDefOptions={{
                     'mrt-row-actions': {
@@ -162,27 +166,31 @@ const CrudTable = () => {
                 onEditingRowSave={handleSaveRowEdits}
                 onEditingRowCancel={handleCancelRowEdits}
                 renderRowActions={({ row, table }) => (
-                    <Box sx={{ display: 'flex', gap: '1rem' }}>
+                    <Box sx={{ display: 'flex', gap: '1rem', alignItems: "center" }}>
                         <Tooltip arrow placement="left" title="Edit">
                             <IconButton onClick={() => table.setEditingRow(row)}>
                                 <Edit />
                             </IconButton>
                         </Tooltip>
                         <Tooltip arrow placement="right" title="Delete">
-                            <IconButton color="error" onClick={() => handleDeleteRow(row)}>
+                            {/* <IconButton color="error" onClick={() => handleDeleteRow(row)}>
                                 <Delete />
-                            </IconButton>
+                            </IconButton> */}
+                            <Switch inputProps={{ 'aria-label': 'controlled' }} checked={checked} onChange={() => handleDeleteRow(row)} defaultChecked size='small' color='success' />
+
                         </Tooltip>
                     </Box>
                 )}
                 renderTopToolbarCustomActions={() => (
-                    <Button
-                        color="success"
+                    <button
+                        // color="primary"
+                        // variant="outlined"
+                        className='bg-lightPurple text-primary py-1 px-2 rounded-md'
                         onClick={() => setCreateModalOpen(true)}
-                        variant="outlined">
 
+                    >
                         Create New Account
-                    </Button>
+                    </button>
                 )}
             />
             <CreateNewAccountModal

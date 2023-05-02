@@ -1,7 +1,5 @@
 import { Public_Sans } from 'next/font/google'
-import Header from '@/components/Header'
 import Head from 'next/head'
-import SidebarMenu from '@/components/Sidebar'
 // import styles from '@/styles/Home.module.css'
 
 const font = Public_Sans({ subsets: ['latin'] })

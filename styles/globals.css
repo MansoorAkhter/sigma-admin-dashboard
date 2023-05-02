@@ -21,14 +21,13 @@
 
 
 /* this for screen scrollBar hide */
-/* html::-webkit-scrollbar{
+html::-webkit-scrollbar{
   display: none;
 }
 
 html{
   scrollbar-width: none;
-} */
-
+}
 
 
 /* ======================= */
@@ -59,3 +58,4 @@ html{
 ::-webkit-scrollbar-button {
   display: none;
 }
+
