@@ -16,6 +16,7 @@ import {
 } from '@mui/material';
 import { Delete, Edit } from '@mui/icons-material';
 import { data, states } from '../data/makeData';
+import SolidButton from './shared/SolidButton';
 
 const CrudTable = () => {
     const [createModalOpen, setCreateModalOpen] = useState(false);
@@ -148,7 +149,7 @@ const CrudTable = () => {
     );
 
     return (
-        <div className='border-[1px] border-gray-300 rounded-md mx-4'>
+        <div className='border-[1px] border-gray-300 rounded-md'>
             <MaterialReactTable
                 displayColumnDefOptions={{
                     'mrt-row-actions': {
@@ -182,15 +183,14 @@ const CrudTable = () => {
                     </Box>
                 )}
                 renderTopToolbarCustomActions={() => (
-                    <button
-                        // color="primary"
-                        // variant="outlined"
-                        className='bg-lightPurple text-primary py-1 px-2 rounded-md'
-                        onClick={() => setCreateModalOpen(true)}
+                    // <button
+                    //     className='bg-lightPurple text-primary py-1 px-2 rounded-md'
+                    //     onClick={() => setCreateModalOpen(true)}
+                    // >
+                    //     Create New Account
+                    // </button>
 
-                    >
-                        Create New Account
-                    </button>
+                    <SolidButton title="Create New Account" onClick={() => setCreateModalOpen(true)} />
                 )}
             />
             <CreateNewAccountModal

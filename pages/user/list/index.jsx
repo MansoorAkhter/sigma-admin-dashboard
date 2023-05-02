@@ -35,7 +35,7 @@ const List = () => {
                 <UsersInfo icon="/icons/voiceUser.svg" name="Pending Users" color="#FFF2D6" />
             </div>
 
-            <div className="py-7">
+            <div className="py-7 px-4">
                 <CrudTable />
             </div>
         </div>
