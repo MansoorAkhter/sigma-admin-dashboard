@@ -1,7 +1,8 @@
 import CrudTable from "@/components/CrudTable";
+import SquareIcon from "@/components/shared/SquareIcon";
 import React from "react";
 
-const UsersInfo = ({ icon, name, color }) => {
+export const UsersInfo = ({ icon, name, color }) => {
 
     return (
         <div className="h-[130px] border-gray-300 border-[1px] rounded-md p-4">
@@ -15,9 +16,7 @@ const UsersInfo = ({ icon, name, color }) => {
 
                 {/* Right Box */}
                 <div className="w-1/2 h-full flex justify-end">
-                    <div className="w-[42px] h-[42px] rounded-md flex items-center justify-center" style={{ backgroundColor: color }}>
-                        <img src={icon} alt={name} />
-                    </div>
+                    <SquareIcon icon={icon} name={name} color={color} />
                 </div>
             </div>
         </div>

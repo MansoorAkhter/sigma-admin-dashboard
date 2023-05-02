@@ -8,7 +8,7 @@ const ProfileImage = () => {
                 className="rounded-full w-[42px] h-[42px]"
             />
             {/*Active User Green Dot */}
-            <div className="w-[11px] h-[11px] bg-green rounded-full absolute ml-8 -mt-[13px] border-solid border-2 border-white" />
+            <div className="w-[11px] h-[11px] bg-brightGreen rounded-full absolute ml-8 -mt-[13px] border-solid border-2 border-white" />
         </div>
     );
 };

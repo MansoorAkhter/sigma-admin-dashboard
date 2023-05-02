@@ -17,16 +17,19 @@ module.exports = {
         darkmodeBG: "#2B2C40",
         darkmodeHeading: "#C4C4D4",
         darkmodeText: "#9495A7",
+        lightmodeSubHeading: "#84919D",
         lightPurple: "#E7E7FF",
         darkGray: "#4D5F71",
         iconGray: "#84919D",
         medGray: "#85929E",
         semiGray: "#97A2AC",
         lightGray: "#A8B1BA",
-        orange: "#FFAB00",
+        brightOrange: "#FFAB00",
         lightOrange: "#FFF2D6",
-        green: "#71DD37",
-        lightGreen: "#E8FADF"
+        brightGreen: "#71DD37",
+        lightGreen: "#E8FADF",
+        brightRed: "#FF5D41",
+        lightRed: "#FFE0DA"
 
       },
     },

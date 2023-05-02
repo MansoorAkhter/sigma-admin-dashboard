@@ -40,7 +40,7 @@ const SidebarMenu = () => {
     const { collapseSidebar } = useProSidebar();
 
     return (
-        <div className="flex h-screen top-0 left-0 sticky">
+        <div className="flex h-screen top-0 left-0 sticky z-10">
             <Sidebar collapsed={isCollapsed}
                 backgroundColor="#2B2C40"
                 transitionDuration={300} >
@@ -112,7 +112,7 @@ const SidebarMenu = () => {
                             <SubMenu label="View" >
                                 <Item
                                     title="Account"
-                                    to="/"
+                                    to="/user/view/account"
                                     selected={selected}
                                     setSelected={setSelected}
                                 />
