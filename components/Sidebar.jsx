@@ -20,12 +20,13 @@ const font = Public_Sans({ subsets: ['latin'] })
 const Item = ({ title, to, selected, setSelected, icon }) => {
     const router = useRouter();
     return (
+
         <MenuItem
             icon={icon}
             active={selected === title}
             onClick={() => {
                 router.push(to);
-                setSelected(title)
+                setSelected(title);
             }}
         >
             <p className="text-base font-medium">{title}</p>
@@ -118,6 +119,13 @@ const SidebarMenu = () => {
                                 />
                                 <Item
                                     title="Security"
+                                    to="/user/view/security"
+                                    selected={selected}
+                                    setSelected={setSelected}
+                                    target="_blank"
+                                />
+                                <Item
+                                    title="Billing & Plans"
                                     to="/"
                                     selected={selected}
                                     setSelected={setSelected}

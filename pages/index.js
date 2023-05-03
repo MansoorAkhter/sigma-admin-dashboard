@@ -1,5 +1,6 @@
 import { Public_Sans } from 'next/font/google'
 import Head from 'next/head'
+import Security from './user/view/security'
 // import styles from '@/styles/Home.module.css'
 
 const font = Public_Sans({ subsets: ['latin'] })

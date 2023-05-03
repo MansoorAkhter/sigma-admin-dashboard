@@ -1,8 +1,7 @@
-import React from "react";
 
 const SolidButton = ({ title, onClick }) => {
     return (
-        <button className='bg-primary text-light py-1.5 px-5 rounded-md font-medium text-sm uppercase'
+        <button className='bg-primary text-light h-9 px-5 rounded-md font-medium text-sm uppercase flex justify-center items-center'
             onClick={onClick}
         >{title}</button>
     );

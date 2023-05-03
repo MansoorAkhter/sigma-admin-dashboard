@@ -12,13 +12,13 @@ module.exports = {
     extend: {
       colors: {
         primary: "#696CFF",
+        lightPurple: "#E7E7FF",
         secondary: "#fff",
         light: "#fff",
         darkmodeBG: "#2B2C40",
         darkmodeHeading: "#C4C4D4",
         darkmodeText: "#9495A7",
         lightmodeSubHeading: "#84919D",
-        lightPurple: "#E7E7FF",
         darkGray: "#4D5F71",
         iconGray: "#84919D",
         medGray: "#85929E",
