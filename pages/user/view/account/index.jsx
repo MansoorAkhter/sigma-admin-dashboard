@@ -1,3 +1,4 @@
+'use client'
 import NavigationCarousel from "@/components/NavigationCarousel";
 import OutlinedButton from "@/components/shared/OutlinedButton";
 import SolidButton from "@/components/shared/SolidButton";
@@ -25,9 +26,9 @@ const InfoIcon = ({ title, quantity, icon, name, color, }) => {
 
 const Account = () => {
     return (
-        <div className="flex gap-4 px-4 pt-7 mb-7">
+        <div className="flex flex-col md:flex-row gap-4 px-4 pt-7 mb-7">
             {/* Left */}
-            <div className="flex flex-col w-[33%]">
+            <div className="flex flex-col w-full md:w-[33%]">
                 <div className="border-gray-300 border-[1px] rounded-md">
 
                     {/* image & name section */}
@@ -63,11 +64,11 @@ const Account = () => {
                         <div className="flex flex-col">
                             <div className="mt-4">
                                 <span className="text-lightmodeSubHeading font-bold mr-2">Username:</span>
-                                <span className="text-lightGray">@johnd7</span>
+                                <span className="text-lightGray">@mansoor</span>
                             </div>
                             <div className="mt-4">
                                 <span className="text-lightmodeSubHeading font-bold mr-2">Billing Email:</span>
-                                <span className="text-lightGray">gslixby0@abc.net.au</span>
+                                <span className="text-lightGray">mansoor21st@gmail.com</span>
                             </div>
                             <div className="mt-4 flex">
                                 <span className="text-lightmodeSubHeading font-bold mr-2">Status:</span>
@@ -85,7 +86,7 @@ const Account = () => {
                             </div>
                             <div className="mt-4">
                                 <span className="text-lightmodeSubHeading font-bold mr-2">Contact:</span>
-                                <span className="text-lightGray">+1 (479) 232-9151</span>
+                                <span className="text-lightGray">+92 (312) 0123-250</span>
                             </div>
                             <div className="mt-4">
                                 <span className="text-lightmodeSubHeading font-bold mr-2">Country:</span>
@@ -104,7 +105,7 @@ const Account = () => {
             </div>
 
             {/* Right */}
-            <div className="flex flex-col w-[67%]">
+            <div className="flex flex-col w-full md:w-[67%]">
                 {/* Top Nav Carousel */}
                 <div className="flex justify-center h-[55px] py-2 gap-x-4 overflow-auto">
                     <SolidButton onClick={() => console.log("account")} title="account" />
@@ -119,7 +120,7 @@ const Account = () => {
                     <div className="">
                         <h5 className="text-darkGray font-semibold text-xl">Current plan</h5>
                     </div>
-                    <div className="flex pt-5">
+                    <div className="flex flex-col md:flex-row pt-5">
                         {/* Left */}
                         <div className="w-full">
                             <div className="">
@@ -134,7 +135,6 @@ const Account = () => {
                                 <p className="text-darkGray font-semibold">$99 Per Month</p>
                                 <p className="text-semiGray font-extralight text-[16px] mt-1">Standard plan for small to medium businesses</p>
                             </div>
-
                         </div>
 
                         {/* Right */}
@@ -148,12 +148,12 @@ const Account = () => {
                                 <span className="text-darkGray font-semibold">24 of 30 Days</span>
                             </div>
                             <div className="mt-2">
-                                <LinearProgress
+                                {/* <LinearProgress
                                     value={72}
                                     variant="buffer"
                                     class=".MuiLinearProgress-bar2Buffer .MuiLinearProgress-bar1Buffer"
                                     sx={{ borderRadius: "10px", height: "10px" }}
-                                />
+                                /> */}
                             </div>
                             <p className="text-semiGray font-extralight text-[16px] mt-1">
                                 6 days remaining until your plan requires update
@@ -177,7 +177,7 @@ const Account = () => {
                     </div>
 
                     {/*Payment Card */}
-                    <div className="flex justify-between items-center border-gray-300 border-[1px] rounded-md p-6 mt-6">
+                    <div className="border-gray-300 border-[1px] rounded-md p-6 mt-6 flex flex-col justify-between items-start md:items-center  md:flex-row">
 
                         <div className="flex flex-col">
                             <img src="/icons/visaLogo.png" width={80} />
@@ -196,56 +196,74 @@ const Account = () => {
                                 <OutlinedButton title="edit" />
                                 <OutlinedButton title="delete" />
                             </span>
-                            <p className="text-semiGray font-extralight text-[14px] self-end mt-7">Card expires at 10/27</p>
+                            <p className="text-semiGray font-extralight text-[14px] self-start md:self-end mt-7">Card expires at 10/27</p>
                         </div>
                     </div>
 
-                    <div className="flex justify-between items-center border-gray-300 border-[1px] rounded-md p-6 mt-6">
+                </div>
 
-                        <div className="flex flex-col">
-                            <img src="/icons/mastercardLogo.png" width={50} />
 
-                            <div className="flex items-center justify-center gap-2 mt-4">
-                                <p className="text-darkGray font-medium text-lg">
-                                    Mansoor Akhter
-                                </p>
-                                <StatusButton title="primary" bgColor="#E7E7FF" textColor="#696CFF" />
-                            </div>
-                            <p className="text-semiGray font-extralight text-[16px] mt-2">**** **** **** 6542</p>
-                        </div>
-
-                        <div className="flex flex-col justify-between ">
-                            <span className="flex gap-3">
-                                <OutlinedButton title="edit" />
-                                <OutlinedButton title="delete" />
-                            </span>
-                            <p className="text-semiGray font-extralight text-[14px] self-end mt-7">Card expires at 10/27</p>
-                        </div>
+                {/* */}
+                <div className="border-gray-300 border-[1px] rounded-md p-6 mt-6">
+                    <div className="flex justify-between items-center">
+                        <h5 className="text-darkGray font-semibold text-xl">Billing Address</h5>
+                        <SolidButton onClick={() => console.log("open modal")} title="edit address" />
                     </div>
 
-                    <div className="flex justify-between items-center border-gray-300 border-[1px] rounded-md p-6 mt-6">
+                    <div className="flex flex-col md:flex-row justify-between pt-5">
+                        {/* Left */}
+                        <table class="table-auto">
+                            <tr >
+                                <td className="text-darkGray font-semibold">Company Name:</td>
+                                <td className="text-semiGray font-extralight text-[16px]">A2Z Creatorz</td>
+                            </tr>
+                            <tr className="">
+                                <td className="text-darkGray font-semibold">Billing Email:</td>
+                                <td className="text-semiGray font-extralight text-[16px]">mansoor21st@gmail.com</td>
+                            </tr>
+                            <tr className="">
+                                <td className="text-darkGray font-semibold">Tax ID:</td>
+                                <td className="text-semiGray font-extralight text-[16px]">TAX-875623</td>
+                            </tr>
+                            <tr className="">
+                                <td className="text-darkGray font-semibold">VAT Number:</td>
+                                <td className="text-semiGray font-extralight text-[16px]">SDF754K77</td>
+                            </tr>
+                            <tr className="">
+                                <td className="text-darkGray font-semibold">Billing Address:</td>
+                                <td className="text-semiGray font-extralight text-[16px]">Mominabad Orangi Town, Karachi</td>
+                            </tr>
+                            <tr className="">
+                                <td className="text-darkGray font-semibold">VAT Number:</td>
+                                <td className="text-semiGray font-extralight text-[16px]">SDF754K77</td>
+                            </tr>
+                        </table>
 
-                        <div className="flex flex-col">
-                            <img src="/icons/visaLogo.png" width={80} />
+                        {/* Right */}
+                        <table class="table-fixed">
+                            <tbody>
+                                <tr className="">
+                                    <td className="text-darkGray font-semibold">Contact:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">+92 (312) 0123-250</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="text-darkGray font-semibold">Country:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">Pakistan</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="text-darkGray font-semibold">State:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">Sindh</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="text-darkGray font-semibold">Zip Code:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">75800</td>
+                                </tr>
+                            </tbody>
 
-                            <div className="flex items-center justify-center gap-2 mt-4">
-                                <p className="text-darkGray font-medium text-lg">
-                                    Mansoor Akhter
-                                </p>
-                                <StatusButton title="primary" bgColor="#E7E7FF" textColor="#696CFF" />
-                            </div>
-                            <p className="text-semiGray font-extralight text-[16px] mt-2">**** **** **** 6542</p>
-                        </div>
-
-                        <div className="flex flex-col justify-between ">
-                            <span className="flex gap-3">
-                                <OutlinedButton title="edit" />
-                                <OutlinedButton title="delete" />
-                            </span>
-                            <p className="text-semiGray font-extralight text-[14px] self-end mt-7">Card expires at 10/27</p>
-                        </div>
+                        </table>
                     </div>
                 </div>
+
             </div>
         </div>
     );

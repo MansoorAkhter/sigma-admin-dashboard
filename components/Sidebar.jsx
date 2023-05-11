@@ -41,7 +41,7 @@ const SidebarMenu = () => {
     const { collapseSidebar } = useProSidebar();
 
     return (
-        <div className="flex h-screen top-0 left-0 sticky z-10">
+        <div className="hidden md:flex h-screen top-0 left-0 sticky z-10 ">
             <Sidebar collapsed={isCollapsed}
                 backgroundColor="#2B2C40"
                 transitionDuration={300} >
@@ -62,8 +62,6 @@ const SidebarMenu = () => {
                     <img src="/logo.svg" alt="sigma logo" />
                     {!isCollapsed ? <h3 className="text-gray-300 font-extrabold text-2xl ml-2">SIGMA</h3> : undefined}
                 </div>
-
-
 
 
                 <Menu iconShape="square"
