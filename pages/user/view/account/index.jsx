@@ -212,50 +212,53 @@ const Account = () => {
 
                     <div className="flex flex-col md:flex-row justify-between pt-5">
                         {/* Left */}
-                        <table class="table-auto">
-                            <tr >
-                                <td className="text-darkGray font-semibold">Company Name:</td>
-                                <td className="text-semiGray font-extralight text-[16px]">A2Z Creatorz</td>
-                            </tr>
-                            <tr className="">
-                                <td className="text-darkGray font-semibold">Billing Email:</td>
-                                <td className="text-semiGray font-extralight text-[16px]">mansoor21st@gmail.com</td>
-                            </tr>
-                            <tr className="">
-                                <td className="text-darkGray font-semibold">Tax ID:</td>
-                                <td className="text-semiGray font-extralight text-[16px]">TAX-875623</td>
-                            </tr>
-                            <tr className="">
-                                <td className="text-darkGray font-semibold">VAT Number:</td>
-                                <td className="text-semiGray font-extralight text-[16px]">SDF754K77</td>
-                            </tr>
-                            <tr className="">
-                                <td className="text-darkGray font-semibold">Billing Address:</td>
-                                <td className="text-semiGray font-extralight text-[16px]">Mominabad Orangi Town, Karachi</td>
-                            </tr>
-                            <tr className="">
-                                <td className="text-darkGray font-semibold">VAT Number:</td>
-                                <td className="text-semiGray font-extralight text-[16px]">SDF754K77</td>
-                            </tr>
+                        <table className="table-fixed border-spacing-x-2  border-spacing-y-2 border-separate">
+                            <tbody>
+                                <tr>
+                                    <td className="text-medGray font-medium">Company Name:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">A2Z Creatorz</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="text-medGray font-medium">Billing Email:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">mansoor21st@gmail.com</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="text-medGray font-medium">Tax ID:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">TAX-875623</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="text-medGray font-medium">VAT Number:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">SDF754K77</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="text-medGray font-medium">Billing Address:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">Mominabad Orangi Town, Karachi</td>
+                                </tr>
+                                <tr className="">
+                                    <td className="text-medGray font-medium">VAT Number:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">SDF754K77</td>
+                                </tr>
+                            </tbody>
                         </table>
 
+
                         {/* Right */}
-                        <table class="table-fixed">
+                        <table className="md:self-start md:mt-0 mt-5 border-spacing-x-2  border-spacing-y-2 border-separate">
                             <tbody>
-                                <tr className="">
-                                    <td className="text-darkGray font-semibold">Contact:</td>
-                                    <td className="text-semiGray font-extralight text-[16px]">+92 (312) 0123-250</td>
+                                <tr>
+                                    <td className="text-medGray font-medium">Contact:</td>
+                                    <td className="text-semiGray font-extralight text-[16px]">+92 (312) 0123-25055</td>
                                 </tr>
-                                <tr className="">
-                                    <td className="text-darkGray font-semibold">Country:</td>
+                                <tr>
+                                    <td className="text-medGray font-medium">Country:</td>
                                     <td className="text-semiGray font-extralight text-[16px]">Pakistan</td>
                                 </tr>
-                                <tr className="">
-                                    <td className="text-darkGray font-semibold">State:</td>
+                                <tr>
+                                    <td className="text-medGray font-medium">State:</td>
                                     <td className="text-semiGray font-extralight text-[16px]">Sindh</td>
                                 </tr>
-                                <tr className="">
-                                    <td className="text-darkGray font-semibold">Zip Code:</td>
+                                <tr>
+                                    <td className="text-medGray font-medium">Zip Code:</td>
                                     <td className="text-semiGray font-extralight text-[16px]">75800</td>
                                 </tr>
                             </tbody>
@@ -265,7 +268,7 @@ const Account = () => {
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };
 
