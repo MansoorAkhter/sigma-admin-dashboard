@@ -14,8 +14,8 @@ const Header = () => {
     const [mode, setMode] = useState(true);
 
     return (
-        <div className="w-full h-[75px] pt-3 px-4 sticky top-0 z-50 bg-white/30 backdrop-blur-xl">
-            <div className="w-full h-full border-[1px] border-gray-300 rounded-md flex items-center justify-between px-2 -mb-2 bg-white/70">
+        <div className="w-full h-[75px] pt-3 px-4 sticky top-0 z-10 bg-white/30 backdrop-blur-xl">
+            <div className="w-full h-full border-[1px] border-gray-200 rounded-md flex items-center justify-between px-2 -mb-2 bg-white/70">
 
                 {/*Search Button */}
                 <div className="flex items-center cursor-pointer">

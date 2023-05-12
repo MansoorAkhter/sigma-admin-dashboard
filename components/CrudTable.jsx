@@ -149,7 +149,7 @@ const CrudTable = () => {
     );
 
     return (
-        <div className='border-[1px] border-gray-300 rounded-md'>
+        <div className='border-[1px] border-gray-200 rounded-md'>
             <MaterialReactTable
                 displayColumnDefOptions={{
                     'mrt-row-actions': {

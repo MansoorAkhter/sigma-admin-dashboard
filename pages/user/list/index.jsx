@@ -5,7 +5,7 @@ import React from "react";
 export const UsersInfo = ({ icon, name, color }) => {
 
     return (
-        <div className="h-[130px] border-gray-300 border-[1px] rounded-md p-4">
+        <div className="h-[130px] border-gray-200 border-[1px] rounded-md p-4">
             <div className="flex items-center h-full w-full">
                 {/* Left Box */}
                 <div className="w-1/2 h-full">
@@ -26,15 +26,15 @@ export const UsersInfo = ({ icon, name, color }) => {
 
 const List = () => {
     return (
-        <div className="">
-            <div className="grid sm:grid-cols-4 gap-4 pt-7 px-4">
+        <div className="px-4 gap-y-7">
+            <div className="grid sm:grid-cols-4 gap-4 my-7">
                 <UsersInfo icon="/icons/normalUser.svg" name="Session" color="#E7E7FF" />
                 <UsersInfo icon="/icons/plusUser.svg" name="Paid Users" color="#FFE0DA" />
                 <UsersInfo icon="/icons/multiUsers.svg" name="Active Users" color="#E8FADF" />
                 <UsersInfo icon="/icons/voiceUser.svg" name="Pending Users" color="#FFF2D6" />
             </div>
 
-            <div className="py-7 px-4">
+            <div className="mb-7">
                 <CrudTable />
             </div>
         </div>

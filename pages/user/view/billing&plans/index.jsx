@@ -29,7 +29,7 @@ const Account = () => {
         <div className="flex flex-col md:flex-row gap-4 px-4 pt-7 mb-7">
             {/* Left */}
             <div className="flex flex-col w-full md:w-[33%]">
-                <div className="border-gray-300 border-[1px] rounded-md">
+                <div className="border-gray-200 border-[1px] rounded-md">
 
                     {/* image & name section */}
                     <div className="p-4 flex flex-col justify-center items-center pt-11">
@@ -116,7 +116,7 @@ const Account = () => {
                 </div>
 
                 {/* Current Plan */}
-                <div className="border-gray-300 border-[1px] rounded-md p-6">
+                <div className="border-gray-200 border-[1px] rounded-md p-6">
                     <div className="">
                         <h5 className="text-darkGray font-semibold text-xl">Current plan</h5>
                     </div>
@@ -139,7 +139,7 @@ const Account = () => {
 
                         {/* Right */}
                         <div className="w-full">
-                            <div className="bg-lightOrange rounded-md w-full py-3 px-4 ">
+                            <div className="bg-lightOrange rounded-md w-full py-3 px-4 mt-8 md:mt-0">
                                 <p className="text-brightOrange font-semibold mb-1">We need your attention!</p>
                                 <p className="text-brightOrange">Your plan requires updates</p>
                             </div>
@@ -148,12 +148,12 @@ const Account = () => {
                                 <span className="text-darkGray font-semibold">24 of 30 Days</span>
                             </div>
                             <div className="mt-2">
-                                {/* <LinearProgress
+                                <LinearProgress
                                     value={72}
                                     variant="buffer"
                                     class=".MuiLinearProgress-bar2Buffer .MuiLinearProgress-bar1Buffer"
-                                    sx={{ borderRadius: "10px", height: "10px" }}
-                                /> */}
+                                    sx={{ borderRadius: "10px", height: "12px" }}
+                                />
                             </div>
                             <p className="text-semiGray font-extralight text-[16px] mt-1">
                                 6 days remaining until your plan requires update
@@ -169,7 +169,7 @@ const Account = () => {
                 </div>
 
                 {/* Payment Methods */}
-                <div className="border-gray-300 border-[1px] rounded-md p-6 mt-6">
+                <div className="border-gray-200 border-[1px] rounded-md p-6 mt-6">
                     {/*Add Card Section*/}
                     <div className="flex justify-between items-center">
                         <h5 className="text-darkGray font-semibold text-xl">Payment Methods</h5>
@@ -177,7 +177,7 @@ const Account = () => {
                     </div>
 
                     {/*Payment Card */}
-                    <div className="border-gray-300 border-[1px] rounded-md p-6 mt-6 flex flex-col justify-between items-start md:items-center  md:flex-row">
+                    <div className="border-gray-200 border-[1px] rounded-md p-6 mt-6 flex flex-col justify-between items-start md:items-center  md:flex-row">
 
                         <div className="flex flex-col">
                             <img src="/icons/visaLogo.png" width={80} />
@@ -191,7 +191,7 @@ const Account = () => {
                             <p className="text-semiGray font-extralight text-[16px] mt-2">**** **** **** 6542</p>
                         </div>
 
-                        <div className="flex flex-col justify-between ">
+                        <div className="flex flex-col justify-between mt-5 md:mt-0">
                             <span className="flex gap-3">
                                 <OutlinedButton title="edit" />
                                 <OutlinedButton title="delete" />
@@ -203,8 +203,8 @@ const Account = () => {
                 </div>
 
 
-                {/* */}
-                <div className="border-gray-300 border-[1px] rounded-md p-6 mt-6">
+                {/*Billing Address*/}
+                <div className="border-gray-200 border-[1px] rounded-md p-6 mt-6">
                     <div className="flex justify-between items-center">
                         <h5 className="text-darkGray font-semibold text-xl">Billing Address</h5>
                         <SolidButton onClick={() => console.log("open modal")} title="edit address" />

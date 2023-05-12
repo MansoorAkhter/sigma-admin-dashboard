@@ -30,8 +30,7 @@ html{
 }
 
 
-/* ======================= */
-/* For the main scrollbar */
+/* ===========Style For the main scrollbar============ */
 ::-webkit-scrollbar {
   width: 3px;
   height: 5px;
@@ -60,10 +59,10 @@ html{
 }
 
 
-/* MUI */
+/* MUI LineProgress Bar*/
 .MuiLinearProgress-bar1Buffer{
 background-color: #696CFF;
-border-radius: 5px;
+border-radius: 10px;
 }
 .MuiLinearProgress-bar2Buffer{
 background-color: #E7E7FF;
