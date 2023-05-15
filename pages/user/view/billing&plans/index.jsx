@@ -1,113 +1,43 @@
-'use client'
+import Image from "next/image";
 import NavigationCarousel from "@/components/NavigationCarousel";
 import OutlinedButton from "@/components/shared/OutlinedButton";
+import StatusButton from "@/components/shared/StatusButton";
 import SolidButton from "@/components/shared/SolidButton";
 import SquareIcon from "@/components/shared/SquareIcon";
-import StatusButton from "@/components/shared/StatusButton";
-import { PlusOne } from "@mui/icons-material";
 import { LinearProgress } from "@mui/material";
-import Image from "next/image";
+import { PlusOne } from "@mui/icons-material";
 import { Icon } from '@mui/material';
+import UserBio from "@/components/UserBio";
+import NoticeBox from "@/components/shared/NoticeBox";
 
-const InfoIcon = ({ title, quantity, icon, name, color, }) => {
-    return (
-        <div className="flex items-center justify-between w-2/4 mx-4">
-            <div className="flex mr-4">
-                <SquareIcon icon={icon} name={title} color={color} />
-            </div>
+// const InfoIcon = ({ title, quantity, icon, name, color, }) => {
+//     return (
+//         <div className="flex items-center justify-between w-2/4 mx-4">
+//             <div className="flex mr-4">
+//                 <SquareIcon icon={icon} name={title} color={color} />
+//             </div>
 
-            <div className="flex flex-col justify-center w-full ml-3 transition duration-300">
-                <span className="font-medium text-xl text-darkGray">{quantity}</span>
-                <span className="font-medium text-[16px] text-semiGray">{title}</span>
-            </div>
-        </div>
-    )
-}
+//             <div className="flex flex-col justify-center w-full ml-3 transition duration-300">
+//                 <span className="font-medium text-xl text-darkGray">{quantity}</span>
+//                 <span className="font-medium text-[16px] text-semiGray">{title}</span>
+//             </div>
+//         </div>
+//     )
+// }
 
-const Account = () => {
+const BillingAndPlans = () => {
     return (
         <div className="flex flex-col md:flex-row gap-4 px-4 pt-7 mb-7">
             {/* Left */}
-            <div className="flex flex-col w-full md:w-[33%]">
-                <div className="border-gray-200 border-[1px] rounded-md">
-
-                    {/* image & name section */}
-                    <div className="p-4 flex flex-col justify-center items-center pt-11">
-                        <Image src="/images/profileImage.png" alt="profile image" width={100} height={100} className="rounded-md w-[110px] h-[110px]" />
-
-                        <h5 className="text-darkGray font-semibold text-[22px] mt-4">Mansoor Akhter</h5>
-
-                        <StatusButton title="admin" textColor="#FF5D41" bgColor="#FFE0DA" />
-                    </div>
-
-                    {/* task & project section */}
-                    <div className="flex justify-between my-4">
-                        <InfoIcon
-                            title="Task Done"
-                            quantity="1.2k"
-                            icon="/icons/check.svg"
-                            color="#E7E7FF"
-                        />
-                        <InfoIcon
-                            title="Project Done"
-                            quantity="563"
-                            icon="/icons/addProjects.svg"
-                            color="#E7E7FF"
-                        />
-                    </div>
-
-                    {/* Details */}
-                    <div className="p-4 ">
-                        <div className="">
-                            <h5 className="font-semibold text-darkGray text-xl">Details</h5>
-                        </div>
-                        <div className="flex flex-col">
-                            <div className="mt-4">
-                                <span className="text-lightmodeSubHeading font-bold mr-2">Username:</span>
-                                <span className="text-lightGray">@mansoor</span>
-                            </div>
-                            <div className="mt-4">
-                                <span className="text-lightmodeSubHeading font-bold mr-2">Billing Email:</span>
-                                <span className="text-lightGray">mansoor21st@gmail.com</span>
-                            </div>
-                            <div className="mt-4 flex">
-                                <span className="text-lightmodeSubHeading font-bold mr-2">Status:</span>
-                                <span>
-                                    <StatusButton title="active" textColor="#71DD37" bgColor="#E8FADF" />
-                                </span>
-                            </div>
-                            <div className="mt-4">
-                                <span className="text-lightmodeSubHeading font-bold mr-2">Role:</span>
-                                <span className="text-lightGray">Admin</span>
-                            </div>
-                            <div className="mt-4">
-                                <span className="text-lightmodeSubHeading font-bold mr-2">Tax ID:</span>
-                                <span className="text-lightGray">Tax-8894</span>
-                            </div>
-                            <div className="mt-4">
-                                <span className="text-lightmodeSubHeading font-bold mr-2">Contact:</span>
-                                <span className="text-lightGray">+92 (312) 0123-250</span>
-                            </div>
-                            <div className="mt-4">
-                                <span className="text-lightmodeSubHeading font-bold mr-2">Country:</span>
-                                <span className="text-lightGray">Pakistan</span>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    {/* Edit & cancel */}
-                    <div className="p-4 mb-2.5 flex justify-center gap-4">
-                        <SolidButton onClick={() => console.log("open modal")} title="Edit" />
-                        <OutlinedButton title="suspend" />
-                    </div>
-                </div>
+            {/* User Bio Section */}
+            <div className="md:w-[33%]">
+                <UserBio />
             </div>
 
             {/* Right */}
             <div className="flex flex-col w-full md:w-[67%]">
                 {/* Top Nav Carousel */}
-                <div className="flex justify-center h-[55px] py-2 gap-x-4 overflow-auto">
+                <div className="flex justify-center gap-x-4 overflow-auto">
                     <SolidButton onClick={() => console.log("account")} title="account" />
                     <SolidButton onClick={() => console.log("security")} title="security" />
                     <SolidButton onClick={() => console.log("bills & plans")} title="billing & plans" />
@@ -116,9 +46,9 @@ const Account = () => {
                 </div>
 
                 {/* Current Plan */}
-                <div className="border-gray-200 border-[1px] rounded-md p-6">
+                <div className="boxStyle">
                     <div className="">
-                        <h5 className="text-darkGray font-semibold text-xl">Current plan</h5>
+                        <h5 className="heading">Current plan</h5>
                     </div>
                     <div className="flex flex-col md:flex-row pt-5">
                         {/* Left */}
@@ -139,20 +69,24 @@ const Account = () => {
 
                         {/* Right */}
                         <div className="w-full">
-                            <div className="bg-lightOrange rounded-md w-full py-3 px-4 mt-8 md:mt-0">
-                                <p className="text-brightOrange font-semibold mb-1">We need your attention!</p>
-                                <p className="text-brightOrange">Your plan requires updates</p>
-                            </div>
+                            <NoticeBox
+                                title="We need your attention!"
+                                message="Your plan requires updates"
+                            />
+
                             <div className="flex justify-between mt-5">
                                 <span className="text-darkGray font-semibold">Days</span>
                                 <span className="text-darkGray font-semibold">24 of 30 Days</span>
                             </div>
                             <div className="mt-2">
                                 <LinearProgress
-                                    value={72}
+                                    value={63}
                                     variant="buffer"
-                                    class=".MuiLinearProgress-bar2Buffer .MuiLinearProgress-bar1Buffer"
-                                    sx={{ borderRadius: "10px", height: "12px" }}
+                                    sx={{
+                                        borderRadius: "10px", height: "12px",
+                                        '& .MuiLinearProgress-bar1Buffer': { backgroundColor: "#696CFF", borderRadius: "10px" },
+                                        '& .MuiLinearProgress-bar2Buffer': { backgroundColor: "#E7E7FF" }
+                                    }}
                                 />
                             </div>
                             <p className="text-semiGray font-extralight text-[16px] mt-1">
@@ -169,15 +103,16 @@ const Account = () => {
                 </div>
 
                 {/* Payment Methods */}
-                <div className="border-gray-200 border-[1px] rounded-md p-6 mt-6">
+                <div className="boxStyle">
+
                     {/*Add Card Section*/}
                     <div className="flex justify-between items-center">
-                        <h5 className="text-darkGray font-semibold text-xl">Payment Methods</h5>
+                        <h5 className="heading">Payment Methods</h5>
                         <SolidButton onClick={() => console.log("open modal")} title={`${'\u002B'} add card`} />
                     </div>
 
                     {/*Payment Card */}
-                    <div className="border-gray-200 border-[1px] rounded-md p-6 mt-6 flex flex-col justify-between items-start md:items-center  md:flex-row">
+                    <div className="boxStyle flex flex-col justify-between items-start md:items-center  md:flex-row">
 
                         <div className="flex flex-col">
                             <img src="/icons/visaLogo.png" width={80} />
@@ -202,9 +137,8 @@ const Account = () => {
 
                 </div>
 
-
                 {/*Billing Address*/}
-                <div className="border-gray-200 border-[1px] rounded-md p-6 mt-6">
+                <div class="boxStyle">
                     <div className="flex justify-between items-center">
                         <h5 className="text-darkGray font-semibold text-xl">Billing Address</h5>
                         <SolidButton onClick={() => console.log("open modal")} title="edit address" />
@@ -272,4 +206,4 @@ const Account = () => {
     );
 };
 
-export default Account;
+export default BillingAndPlans;

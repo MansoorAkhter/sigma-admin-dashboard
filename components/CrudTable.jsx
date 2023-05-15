@@ -177,7 +177,7 @@ const CrudTable = () => {
                             {/* <IconButton color="error" onClick={() => handleDeleteRow(row)}>
                                 <Delete />
                             </IconButton> */}
-                            <Switch inputProps={{ 'aria-label': 'controlled' }} checked={checked} onChange={() => handleDeleteRow(row)} defaultChecked size='small' color='success' />
+                            <Switch inputProps={{ 'aria-label': 'controlled' }} checked={checked} onChange={() => handleDeleteRow(row)} defaultChecked size='small' color='primary' />
 
                         </Tooltip>
                     </Box>

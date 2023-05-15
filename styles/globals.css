@@ -21,7 +21,7 @@
 
 
 /* this for screen scrollBar hide */
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   display: none;
 }
 
@@ -58,12 +58,20 @@ html{
   display: none;
 }
 
-
-/* MUI LineProgress Bar*/
-.MuiLinearProgress-bar1Buffer{
-background-color: #696CFF;
-border-radius: 10px;
+/* =====================Custom CSS Classes================== */
+.marginPadding, .boxStyle{
+  padding: 1.5rem/* 24px */;
+  margin-top: 1.5rem/* 24px */;
 }
-.MuiLinearProgress-bar2Buffer{
-background-color: #E7E7FF;
+.borderStyle, .boxStyle{
+
+  border-width: 1px;
+  border-radius: 0.375rem/* 6px */;
+  border-color: #E5E7EB;
+}
+.heading{
+  font-weight: 600;
+  font-size: 1.25rem/* 20px */;
+  line-height: 1.75rem/* 28px */;
+  color: #4D5F71;
 }
