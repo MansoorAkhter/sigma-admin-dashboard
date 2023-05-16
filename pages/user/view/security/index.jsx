@@ -3,7 +3,7 @@ import UserBio from "@/components/UserBio";
 import NoticeBox from "@/components/shared/NoticeBox";
 import SolidButton from "@/components/shared/SolidButton";
 
-import IconButton from '@mui/material/IconButton';
+import IconButton from '@/components/shared/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -96,27 +96,31 @@ const Security = () => {
                 {/* Two-step verification */}
                 <div className="boxStyle">
                     <h5 className="heading mb-2">Two-step verification</h5>
-                    <p className="text-semiGray text-sm font-extralight">
+                    <p className="text-medGray text-sm font-extralight">
                         Keep your account secure with authentication step.
                     </p>
-                    <h5 className="text-darkGray font-semibold my-6">SMS</h5>
+                    <h5 className="text-darkGray font-semibold mt-6">SMS</h5>
 
-                    <div className="flex items-center justify-between">
-                        <p>+1(968) 819-2547</p>
-                        <IconButton icon="/icons/bell.svg" name="edit" />
-
-                        <div className="w-[42px] h-[42px] mr-[6px] hover:bg-gray-100 flex items-center justify-center rounded-full transition duration-300 cursor-pointer">
-                            {/* <BiBell size={24} color="#627282" /> */}
-                            <img src="/icons/trash.svg" alt="edit" width={20} height={20} />
-                        </div>
-                        <div className="w-[42px] h-[42px] hover:bg-gray-100 flex items-center justify-center rounded-full transition duration-300 cursor-pointer">
-                            {/* <BiBell size={24} color="#627282" /> */}
-                            <img src="/icons/edit.svg" alt="edit" width={20} height={20} />
-                        </div>
+                    <div className="flex items-center justify-between border-b-[1px] mt-2 pb-1.5">
+                        <p className="text-semiGray font-light text-[17px]">+1(968) 819-2547</p>
+                        <span className="flex gap-x-1">
+                            <IconButton
+                                name="edit"
+                                icon="/icons/edit.svg"
+                                onClick={() => console.log("Edit")}
+                                size={18}
+                            />
+                            <IconButton
+                                name="delete"
+                                icon="/icons/trash.svg"
+                                onClick={() => console.log("Delete")}
+                                size={18}
+                            />
+                        </span>
                     </div>
 
-                    <p className="text-semiGray text-[16px] font-extralight">
-                        Two-factor authentication adds an additional layer of security to your account by requiring more than just a password to log in. Learn more.
+                    <p className="text-medGray text-[16px] font-extralight mt-6">
+                        Two-factor authentication adds an additional layer of security to your account by requiring more than just a password to log in. <span className="hover:text-primary cursor-pointer" onClick={() => console.log("Learn more....")}>Learn more.</span>
                     </p>
 
                 </div>
